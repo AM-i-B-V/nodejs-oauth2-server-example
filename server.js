@@ -175,6 +175,7 @@ const amiApiClient = new AmiApiClient(apiConfig);
 // Route: Create a lead
 app.post("/leads", async (req, res) => {
   try {
+    // Add input validation - validate required fields
     const leadData = {
       initiative: req.body.initiative,
       source: req.body.source,
