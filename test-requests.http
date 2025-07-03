@@ -12,7 +12,7 @@ Content-Type: application/json
   "initiative": "Customer",
   "source": "autoverald",
   "leadType": "InformationRequest",
-  "dealerId": "1245",
+  "dealerId": "698351",
   "prospect": {
     "lastName": "Doe",
     "emailAddress": "john.doe@example.com"

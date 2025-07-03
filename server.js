@@ -3,35 +3,36 @@ const axios = require("axios");
 const qs = require("querystring");
 require("dotenv").config();
 
-axios.interceptors.request.use((request) => {
-  console.log("Request:", {
-    method: request.method,
-    url: request.url,
-    headers: request.headers,
-    data: request.data,
+if (process.env.NODE_ENV === "development") {
+  axios.interceptors.request.use((request) => {
+    console.log("Request:", {
+      method: request.method,
+      url: request.url,
+      headers: request.headers,
+      data: request.data,
+    });
+    return request;
   });
-  return request;
-});
 
-axios.interceptors.response.use(
-  (response) => {
-    console.log("Response:", {
-      status: response.status,
-      headers: response.headers,
-      data: response.data,
-    });
-    return response;
-  },
-  (error) => {
-    console.log("Error Response:", {
-      status: error.response?.status,
-      headers: error.response?.headers,
-      data: error.response?.data,
-    });
-    return Promise.reject(error);
-  }
-);
-
+  axios.interceptors.response.use(
+    (response) => {
+      console.log("Response:", {
+        status: response.status,
+        headers: response.headers,
+        data: response.data,
+      });
+      return response;
+    },
+    (error) => {
+      console.log("Error Response:", {
+        status: error.response?.status,
+        headers: error.response?.headers,
+        data: error.response?.data,
+      });
+      return Promise.reject(error);
+    }
+  );
+}
 class AmiApiClient {
   constructor(config) {
     this.clientId = config.clientId;
