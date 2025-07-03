@@ -4,6 +4,16 @@ A sample Node.js server-side application for authenticating with AM-I Data Inges
 
 ---
 
+## Flow Diagrams
+
+### OAuth2 Lead Creation Flow Chart
+
+![OAuth2 Lead Creation Flow Chart](assets/flow-chart.png)
+
+### OAuth2 Lead Creation Sequence Diagram
+
+![OAuth2 Lead Creation Sequence Diagram](assets/sequence-diagram.png)
+
 ## Architecture Overview
 
 This application demonstrates a complete OAuth 2.0 client credentials flow implementation with the following components:
