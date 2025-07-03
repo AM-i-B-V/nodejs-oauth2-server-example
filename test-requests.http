@@ -1,0 +1,21 @@
+### Health Check
+GET http://localhost:3000/health
+
+### Check Token Status
+GET http://localhost:3000/token-status
+
+### Create Lead (client credentials flow)
+POST http://localhost:3000/leads
+Content-Type: application/json
+
+{
+  "initiative": "Customer",
+  "source": "autoverald",
+  "leadType": "InformationRequest",
+  "dealerId": "1245",
+  "prospect": {
+    "lastName": "Doe",
+    "emailAddress": "john.doe@example.com"
+  }
+}
+
