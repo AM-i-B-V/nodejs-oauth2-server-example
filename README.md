@@ -6,13 +6,13 @@ A sample Node.js server-side application for authenticating with AM-I Data Inges
 
 ## Flow Diagrams
 
-### OAuth2 Lead Creation Flow Chart
-
-![OAuth2 Lead Creation Flow Chart](assets/flow-chart.png)
-
-### OAuth2 Lead Creation Sequence Diagram
+### Sequence Diagram: Node.js Server Lead Creation Flow with OAuth2.0 Token Handling
 
 ![OAuth2 Lead Creation Sequence Diagram](assets/sequence-diagram.png)
+
+### Flow Chart: Node.js Server Lead Creation Flow with OAuth2.0 Token Handling
+
+![OAuth2 Lead Creation Flow Chart](assets/flow-chart.png)
 
 ## Architecture Overview
 
